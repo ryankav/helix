@@ -1,0 +1,25 @@
+theme = "rose_pine"
+
+[editor]
+line-number = "relative"
+bufferline = "multiple"
+cursorline = true
+indent-guides = { render = true }
+
+[editor.cursor-shape]
+insert = "bar"
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+C-d = ":bc"
+# will always use ctrl-d to close buffer but for symmetry remap the half page up keymap as well
+C-u = ":bc"
+
+[keys.normal.space]
+space = "goto_previous_buffer"
+F = "file_picker_in_current_buffer_directory"
+w = ":w"
+
+[keys.insert]
+j = { k = "normal_mode" }
+k = { j = "normal_mode" }
